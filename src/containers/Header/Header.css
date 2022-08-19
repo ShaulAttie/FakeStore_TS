@@ -1,0 +1,132 @@
+.Header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70px;
+    box-shadow: 0px 13px 13px 0px rgba(0, 0, 0, 0.5);
+}
+
+.Container_Header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+
+.Logo_Header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    /* width: 16%; */
+    width: 180px;
+}
+
+.Logo_Header img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.Header__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+}
+
+.StoreName_Header {
+    display: flex;
+    align-items: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 26px;
+    letter-spacing: 1.5px;
+    word-spacing: 0px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.Cart_Login_Header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 180px;
+}
+
+.Cart_Header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    cursor: pointer;
+}
+.cart_icon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    scale: 2;
+    position: relative;
+    bottom: 0.5rem;
+}
+.cart_quantity{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    right: -8px;
+    scale: 0.5;
+    background: red;
+    color: white;
+    height: 25px;
+    width: 25px;
+
+}
+
+.Vertical_Nav {
+    visibility: hidden;
+}
+
+@media(max-width:1000px) {
+    .Header__nav {
+        /* display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center; */
+        width: 180px;
+    }
+    .Cart_Login_Header{
+        width: 120px;
+    }
+}
+
+
+
+
+@media(max-width:550px) {
+    .Header__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 180px;
+    }
+    .Cart_Login_Header{
+        width: 60px;
+    }
+}

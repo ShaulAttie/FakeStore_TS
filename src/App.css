@@ -1,0 +1,29 @@
+.Wrap_App {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  /* border: 2px solid red; */
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media(max-width: 1000px) {
+  .categories {
+    max-width: 500px;
+  }
+}

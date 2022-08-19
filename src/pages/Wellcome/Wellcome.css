@@ -1,0 +1,126 @@
+.wellcome_container {
+    width: 100vw;
+    height: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    object-fit: scale-down;
+    position: relative;
+    overflow: hidden;
+}
+
+.wellcome_carousel {
+    display: flex;
+    /* height: 50%; */
+    transition: all 2.5s ease;
+
+
+}
+
+.wellcome_img {
+    width: 100vw;
+    flex: 1;
+    height: 90%;
+
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+}
+
+.wellcome_img img {
+    height: 70%;
+    width: 70vw;
+}
+
+.wellcome_Left {
+    width: 50px;
+    height: 50px;
+    background-color: #fff7f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -40%;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.wellcome_Right {
+    width: 50px;
+    height: 50px;
+    background-color: #fff7f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -40%;
+    bottom: 0;
+    right: 20px;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.wellcome_info {
+    width: 100%;
+    height: 70%;
+    flex: 1;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wellcome_info h1 {
+    font-size: xx-large;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.wellcome_info button {
+    box-shadow: inset 0px 0px 26px 0px #3dc21b;
+    background-color: transparent;
+    border-radius: 9px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: green;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 17px;
+    padding: 11px 33px;
+    text-decoration: none;
+    text-shadow: 3px 2px 7px #2f6627;
+}
+
+.wellcome_info button:hover {
+    background-color: transparent;
+    box-shadow: 0px 0px 26px 0px #3dc21b;
+    color: black;
+
+}
+
+.wellcome_info button:active {
+    position: relative;
+    top: 1px;
+}
+
+.wellcome_info p {
+    width: 60%;
+
+}

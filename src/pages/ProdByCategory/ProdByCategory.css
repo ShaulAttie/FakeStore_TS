@@ -1,0 +1,20 @@
+.ProductsByCategory{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 90%;
+}
+
+@media(max-width: 1120px){
+    .ProductsByCategory{
+        width: 450px;
+    } 
+}
+
+@media(max-width: 600px){
+    .ProductsByCategory{
+        width: 370px;
+    } 
+}

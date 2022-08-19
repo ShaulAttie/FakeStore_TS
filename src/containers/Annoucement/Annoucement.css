@@ -1,0 +1,12 @@
+.annoucement_container {
+    width: 100%;
+    height: 30px;
+    background-color: teal;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}

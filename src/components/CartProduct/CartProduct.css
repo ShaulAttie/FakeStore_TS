@@ -1,0 +1,128 @@
+.cart__product {
+    min-height: 90px;
+    width: 500px;
+    /* width: 500px; */
+    border-bottom: 0.5px solid gray;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.cart__img {
+    height: 75px;
+    width: 115px;
+    /* border: 2px solid black; */
+
+}
+
+.cart__img img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.cart__title {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: justify;
+    font-size: medium;
+    margin-left: 0.8rem;
+}
+
+.cart__title :first-child {
+    min-height: 60px;
+}
+
+
+.cart__sub_total {
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 90px;
+    width: 24%;
+    align-items: flex-end;
+    justify-content: space-around;
+    align-self: flex-end;
+    margin-bottom: 0.7rem;
+}
+
+.remove_button {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    align-self: start;
+
+}
+
+.remove_button button {
+    background-color: none;
+    border: none;
+    background: none;
+    font-size: x-large;
+    font-weight: 300;
+    opacity: 0.5;
+
+}
+
+.cart__qty {
+    font-size: small;
+}
+
+.cart__total {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 430px;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+.cart__total :first-child {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cart__total :last-child {
+    font-size: 2rem;
+}
+
+@media(max-width: 550px) {
+    .products-container {
+        gap: 1rem;
+    }
+
+    .cart__product {
+        /* min-height: 90px; */
+        width: 100%;
+    }
+
+    .cart__title {
+        width: 50%;
+        font-size: small;
+        margin-left: 0.8rem;
+    }
+
+    .cart__total {
+        width: 86%;
+    }
+
+    .cart__total :first-child {
+        font-size: 1rem;
+    }
+    
+
+    .cart__total :last-child {
+        font-size: 1rem;
+    }
+
+    .cart__qty {
+        font-size: x-small;
+    }
+
+    .cart__sub_total {
+        font-size: small;
+        /* margin-bottom: 0.3rem; */
+
+    }
+
+}
