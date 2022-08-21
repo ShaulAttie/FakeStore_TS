@@ -8,14 +8,18 @@ import { Product } from "../../containers/Product";
 import { ctx } from "../../context";
 import { StateInterface } from "../../globalTypes";
 
+type categoryParams = {
+  category: any;
+}
+
 const ProdByCategory: React.FC = (): JSX.Element => {
   const state = useContext(ctx) as StateInterface;
   
-  const { category } = useParams();
+  const {category} = useParams<categoryParams>();
   
   return (
     <Fragment>
-      <div>{category}</div>
+      <div className="ProductsByCategory_title">{category.charAt(0).toUpperCase() + category.slice(1)}</div>
       {state.products.length ? (
         <div className="ProductsByCategory">
           {state.products.map(

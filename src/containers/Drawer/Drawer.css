@@ -1,9 +1,33 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 10px;
 
-  .drawer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    color: white;
-    font-size: 25px;
-    padding-top: 20px;
-  }
+  min-height: 85vh;
+  width: 100%;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 100px;
+  width: 510px;
+  z-index: 10;
+
+}
+
+.drawer__header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.drawer__items {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}

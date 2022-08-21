@@ -102,7 +102,6 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             closeCart
         }}>
             {children}
-            {/* <Cart /> */}
         </ShoppingCartContext.Provider>
     )
 }

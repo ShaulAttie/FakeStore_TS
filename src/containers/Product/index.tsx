@@ -18,7 +18,7 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ title, image, pid, price, rate }): JSX.Element => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate(`${title.trim()}`);
+    navigate(`${title.replace("/","")}`);
   };
 
 
@@ -31,14 +31,16 @@ const Product: React.FC<ProductProps> = ({ title, image, pid, price, rate }): JS
       <div className="Product__thumbnail">
         <img src={image} alt={title} onClick={handleClick} />
       </div>
-      <h2 className="Product__title">{title}</h2>
+      <h2 className="Product__title">{title.replace("/","")}</h2>
       <div className="Product__price">
         <div>⭐{rate}</div>
         <div>{FormatCurrency(price)}</div>
       </div>
       <div className="Product__cartbuttons">
         {quantity === 0
-          ? <button onClick={() => increaseCartQuantity(pid)}>+ Add to Cart</button>
+          ? <div className="addto">
+            <button onClick={() => increaseCartQuantity(pid)}>+ Add to Cart</button>
+            </div>
           : <>
             <div>
               <button onClick={() => decreaseCartQuantity(pid)}>-</button>{quantity}<span>in cart</span><button onClick={() => increaseCartQuantity(pid)}>+</button>

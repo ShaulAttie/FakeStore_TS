@@ -1,0 +1,194 @@
+.about_container {
+    min-height: 400px;
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+}
+
+.about_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.about_left h4 {
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+}
+
+.about_right {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+}
+
+.about_right img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+
+}
+
+.about_footer {
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    border: 1px solid black;
+    justify-content: space-around;
+    margin-top: 40px;
+    box-shadow: 0 -13px 13px 0 rgba(0, 0, 0, 0.5);
+}
+
+.about_policies {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 25%;
+
+}
+
+.about_policies div:hover {
+    color: yellow;
+}
+
+.about_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 47%;
+    align-items: center;
+
+}
+
+.about_contact div {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 15px;
+}
+
+.about_contact .about_icon {
+    scale: 1.5;
+    margin-right: 0.5rem;
+}
+
+.about_social {
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    height: 100%;
+    justify-content: start;
+}
+
+.about_social h1 {
+    margin-bottom: 30px;
+}
+
+.about_icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 15px;
+    width: 60%;
+    align-self: center;
+}
+
+.about_icons div {
+    scale: 2;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
+
+.about_icons div:hover {
+    color: red;
+}
+
+
+@media(max-width: 988px) {
+
+    .about_left,
+    .about_right {
+        width: 50%;
+    }
+
+    .about_right {
+        width: 350px;
+        height: 350px;
+    }
+
+}
+
+@media (max-width: 865px) {
+    .about_right {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width:741px) {
+    .about_container {
+        flex-direction: column;
+    }
+
+    .about_left {
+        width: 90%;
+        align-self: center;
+    }
+
+    .about_right {
+        width: 400px;
+        height: 400px;
+        align-self: center;
+    }
+
+    .about_footer {
+        font-size: small;
+    }
+
+}
+
+@media(max-width: 511px) {
+    .about_footer {
+        flex-wrap: wrap;
+    }
+
+    .about_policies {
+        width: 35%;
+    }
+
+    .about_contact {
+        width: 65%;
+    }
+
+    .about_social {
+        width: 300px;
+        height: 120px;
+    }
+
+    .about_icons {
+        flex-wrap: nowrap;
+    }
+}
+
+@media(max-width:450px) {
+    .about_right {
+        width: 370px;
+        height: 370px;
+        align-self: center;
+    }
+}

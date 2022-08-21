@@ -14,6 +14,9 @@ const Cart: React.FC = (): JSX.Element => {
 
   const { cartItems } = useShoppingCart()
 
+  // console.log(cartItems);
+  
+
 
 
   return (

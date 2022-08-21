@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 // import Drawer from "../Drawer";
 import logo from "../../assets/unculture.png"
+// import Drawer from "../Drawer";
+
+import {TbShoppingCart} from "react-icons/tb"
 
 const Header: React.FC = (): JSX.Element => {
   const navigate = useNavigate()
 
-  const { cartQuantity } = useShoppingCart()
+  
+  const { cartQuantity, openCart, closeCart } = useShoppingCart()
+  
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   return (
     <div className="Header">
@@ -26,15 +32,19 @@ const Header: React.FC = (): JSX.Element => {
           <Link to="/about">About</Link>
         </nav>
 
+        {/* <button className="drawer_test" onClick={() => setIsOpen(true)}>list</button> */}
+
         <div className="Cart_Login_Header">
-          {/* <div className="Signin_Header" onClick={() => navigate("/signin")}>😊<span>Sign In</span></div>
-          <div className="Login_Header" onClick={() => navigate("/login")}>😊<span>Log In</span></div> */}
           <div className="Cart_Header" onClick={() => navigate("/cart")}>
-            <div className="cart_icon"> 🛒
+            <div className="cart_icon"> <TbShoppingCart/>
               <div className="cart_quantity">{cartQuantity}</div>
             </div>
           </div>
         </div>
+
+        {/* {<Drawer isOpen={isOpen} setIsOpen={setIsOpen}/>} */}
+
+
       </div>
     </div>
   );

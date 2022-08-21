@@ -51,13 +51,12 @@ function App(): JSX.Element {
                   <Route path="/categories/:category" element={<ProdByCategory />} />
                   <Route
                     path="/categories/:category/:title"
-                    element={<ProductDetail dispatch={dispatch} />}
+                    element={<ProductDetail />}
                   />
                   <Route path="*" element={<WrongPage />} />
                 </Routes>
               </Layout>
               {/* <Drawer isOpen={isOpen} /> */}
-              {/* <DrawerCard id={0} quantity={0} /> */}
             </div>
           </div>
         </BrowserRouter>

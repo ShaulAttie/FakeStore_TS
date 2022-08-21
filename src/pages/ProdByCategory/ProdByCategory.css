@@ -7,6 +7,11 @@
     width: 90%;
 }
 
+.ProductsByCategory_title{
+    font-size: xx-large;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 @media(max-width: 1120px){
     .ProductsByCategory{
         width: 450px;

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./Wellcome.css"
 import electronics from "../../assets/carousel/eletronics.png"
 import jewelery from "../../assets/carousel/jewelry.jpg"
@@ -20,61 +20,70 @@ const Wellcome = () => {
     }
 
   }
+  
+// useEffect(() => {
+//   setInterval(() =>
+//       handleClick('right')
+//     , 4500);
 
-  // const myInterval = setInterval(() => handleClick('right'), 2500);
+// },[slideIndex])
+// console.log(slideIndex);
 
+
+  const R = ">"
+  const L = "<"
 
   return (
     <div className="wellcome_container">
-      <button className='wellcome_Left' name="left" onClick={(e) => handleClick("left")}>L</button>
+      <button className='wellcome_Left' name="left" onClick={(e) => handleClick("left")}>{L}</button>
       <div className='wellcome_carousel' style={{ transform: `translateX(${slideIndex * -100}vw)` }}>
 
         <div className="wellcome_img right">
-          <img src={electronics} alt="Electronic"/>
+          <img src={electronics} alt="Electronic" />
           <div className="wellcome_info">
             <h1>ElectronicS</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Metus vulputate eu scelerisque 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Metus vulputate eu scelerisque
               felis imperdiet...</p>
-            <button onClick={()=> navigate("categories/electronics")}>Shop Now</button>
+            <button onClick={() => navigate("categories/electronics")}>Shop Now</button>
           </div>
         </div>
 
         <div className="wellcome_img left">
-          <img src={jewelery} alt="Jewelery"/>
+          <img src={jewelery} alt="Jewelery" />
           <div className="wellcome_info">
             <h1>JewelerY</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Metus vulputate eu scelerisque 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Metus vulputate eu scelerisque
               felis imperdiet...</p>
-            <button onClick={()=> navigate("categories/jewelery")}>Shop Now</button>
+            <button onClick={() => navigate("categories/jewelery")}>Shop Now</button>
           </div>
         </div>
 
         <div className="wellcome_img right">
-          <img src={men} alt="Men's Clothing"/>
+          <img src={men} alt="Men's Clothing" />
           <div className="wellcome_info">
             <h1>Men's clothinG</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Metus vulputate eu scelerisque 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Metus vulputate eu scelerisque
               felis imperdiet...</p>
-            <button onClick={()=> navigate("categories/men's%20clothing")}>Shop Now</button>
+            <button onClick={() => navigate("categories/men's%20clothing")}>Shop Now</button>
           </div>
         </div>
 
         <div className="wellcome_img left">
-          <img src={women} alt="Women's Clothing"/>
+          <img src={women} alt="Women's Clothing" />
           <div className="wellcome_info">
             <h1>Women's clothinG</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Metus vulputate eu scelerisque 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Metus vulputate eu scelerisque
               felis imperdiet...</p>
-            <button onClick={()=> navigate("categories/women's%20clothing")}>Shop Now</button>
+            <button onClick={() => navigate("categories/women's%20clothing")}>Shop Now</button>
           </div>
         </div>
 
       </div>
-      <button className='wellcome_Right' name="right" onClick={(e) => handleClick("right")}>R</button>
+      <button className='wellcome_Right' name="right" onClick={(e) => handleClick("right")}>{R}</button>
     </div>
   )
 }
